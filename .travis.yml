@@ -1,0 +1,26 @@
+language: objective-c
+osx_image: xcode10
+
+env:
+  global:
+    - PROJECT='SwiftyBinarySearch.xcodeproj'
+    - MACOS_SCHEME='SwiftyBinarySearch-Package'
+    - MACOS_DESTINATION='platform=OS X'
+
+before_install:
+  - bundle install
+  - gem install cocoapods --pre
+  - npm install -g swizzy
+  - brew update
+  - brew outdated xctool || brew upgrade xctool
+
+script:
+  - set -o pipefail
+  - swift --version
+  - swift package generate-xcodeproj --enable-code-coverage
+  - xcodebuild clean build test -project "$PROJECT" -scheme "$MACOS_SCHEME" -destination "$MACOS_DESTINATION" | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-macos.json" xcpretty -f `xcpretty-json-formatter`
+  - bash <(curl -s https://codecov.io/bash) -cF osx -J 'SwiftyBinarySearch'
+
+after_success:
+  - swiftlint lint | swizzy
+  

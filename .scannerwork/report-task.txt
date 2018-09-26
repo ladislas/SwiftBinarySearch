@@ -1,0 +1,7 @@
+organization=ladislas-github
+projectKey=ladislas_SwiftyBinarySearch
+serverUrl=https://sonarcloud.io
+serverVersion=7.4.0.17063
+dashboardUrl=https://sonarcloud.io/dashboard?id=ladislas_SwiftyBinarySearch
+ceTaskId=AWYV9D5cCtES-6LJIN52
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWYV9D5cCtES-6LJIN52
