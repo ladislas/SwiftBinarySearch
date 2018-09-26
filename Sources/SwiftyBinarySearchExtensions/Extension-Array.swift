@@ -21,7 +21,7 @@ extension Array where Element: Comparable {
 
 	- the `array` must be sorted first
 	- the function will not work on unsorted arrays and will return false results
-	- to find a value in an unsorted array, use the [firstIndex(of:)](https://developer.apple.com/documentation/swift/defaultindices/2995243-firstindex) function
+	- to find a value in an unsorted array, use the `firstIndex(of:)` function
 
 	## Usage Example:
 
@@ -49,7 +49,7 @@ extension Array where Element: Comparable {
 
 	- the `array` must be sorted first
 	- the function will not work on unsorted arrays and will return false results
-	- to find a value in an unsorted array, use the [firstIndex(of:)](https://developer.apple.com/documentation/swift/defaultindices/2995243-firstindex) function
+	- to find a value in an unsorted array, use the `firstIndex(of:)` function
 
 	## Usage Example:
 
@@ -154,7 +154,7 @@ extension Array where Element: Comparable {
 
 		var array = self as! [T]
 		array.insert(element, at: self.binarySearch(for: element))
-		self = array as! Array<Element>
+		self = array as! [Element]
 
 	}
 

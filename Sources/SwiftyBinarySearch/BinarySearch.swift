@@ -18,7 +18,7 @@ Find the index of a value in a sorted array
 
 - the `array` must be sorted first
 - the function will not work on unsorted arrays and will return false results
-- to find a value in an unsorted array, use the [firstIndex(of:)](https://developer.apple.com/documentation/swift/defaultindices/2995243-firstindex) function
+- to find a value in an unsorted array, use the `firstIndex(of:)` function
 
 ## Usage Example:
 
@@ -45,20 +45,16 @@ public func binarySearch<T: Comparable>(for value: T, in array: [T]) -> Int {
 
 			return midIndex
 
+		} else if value > array[midIndex] {
+
+			lowerBound = midIndex + 1
+
 		} else {
 
-			if value > array[midIndex] {
-
-				lowerBound = midIndex + 1
-
-			}
-			else {
-
-				upperBound = midIndex - 1
-
-			}
+			upperBound = midIndex - 1
 
 		}
+
 	}
 
 	return lowerBound
@@ -74,7 +70,7 @@ Find the index of a value in a sorted array
 
 - the `array` must be sorted first
 - the function will not work on unsorted arrays and will return false results
-- to find a value in an unsorted array, use the [firstIndex(of:)](https://developer.apple.com/documentation/swift/defaultindices/2995243-firstindex) function
+- to find a value in an unsorted array, use the `firstIndex(of:)` function
 
 ## Usage Example:
 

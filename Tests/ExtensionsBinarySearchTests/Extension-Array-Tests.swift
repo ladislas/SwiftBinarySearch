@@ -33,7 +33,7 @@ final class array_extension_binarySearch_in_int_array: XCTestCase {
 		("test_value_exist", test_value_exist),
 		("test_value_does_not_exist", test_value_does_not_exist),
 		("test_value_under_lower_bound", test_value_under_lower_bound),
-		("test_value_above_upper_bound", test_value_above_upper_bound),
+		("test_value_above_upper_bound", test_value_above_upper_bound)
 	]
 
 }
@@ -70,7 +70,7 @@ final class array_extension_binarySearch_in_double_array: XCTestCase {
 		("test_value_exist", test_value_exist),
 		("test_value_does_not_exist", test_value_does_not_exist),
 		("test_value_under_lower_bound", test_value_under_lower_bound),
-		("test_value_above_upper_bound", test_value_above_upper_bound),
+		("test_value_above_upper_bound", test_value_above_upper_bound)
 	]
 
 }
@@ -107,7 +107,7 @@ final class array_extension_binarySearch_in_string_array: XCTestCase {
 		("test_value_exist", test_value_exist),
 		("test_value_does_not_exist", test_value_does_not_exist),
 		("test_value_under_lower_bound", test_value_under_lower_bound),
-		("test_value_above_upper_bound", test_value_above_upper_bound),
+		("test_value_above_upper_bound", test_value_above_upper_bound)
 	]
 
 }
@@ -154,7 +154,7 @@ final class array_extension_binarySearchAndInsert_in_int_array_in_place: XCTestC
 		("test_value_exist", test_value_exist),
 		("test_value_does_not_exist", test_value_does_not_exist),
 		("test_value_under_lower_bound", test_value_under_lower_bound),
-		("test_value_above_upper_bound", test_value_above_upper_bound),
+		("test_value_above_upper_bound", test_value_above_upper_bound)
 	]
 
 }
@@ -201,7 +201,7 @@ final class array_extension_binarySearchAndInsert_in_int_array_and_return: XCTes
 		("test_value_exist", test_value_exist),
 		("test_value_does_not_exist", test_value_does_not_exist),
 		("test_value_under_lower_bound", test_value_under_lower_bound),
-		("test_value_above_upper_bound", test_value_above_upper_bound),
+		("test_value_above_upper_bound", test_value_above_upper_bound)
 	]
 
 }
@@ -239,7 +239,7 @@ final class convenience_function: XCTestCase {
 	static var allTests = [
 		("test_convenient_function_search", test_convenient_function_search),
 		("test_convenient_function_searchAndInsert", test_convenient_function_searchAndInsert),
-		("test_convenient_function_searchAndInsert_in_place", test_convenient_function_searchAndInsert_in_place),
+		("test_convenient_function_searchAndInsert_in_place", test_convenient_function_searchAndInsert_in_place)
 	]
 
 }
