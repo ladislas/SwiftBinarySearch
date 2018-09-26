@@ -4,12 +4,31 @@
 import PackageDescription
 
 let package = Package(
+
     name: "SwiftyBinarySearch",
+
     products: [
-        .library(name: "SwiftyBinarySearch", targets: ["SwiftyBinarySearch"]),
+
+        .library(name: "SwiftyBinarySearch",
+				 targets: ["SwiftyBinarySearch"]),
+        .library(name: "SwiftyBinarySearchExtensions",
+				 targets: ["SwiftyBinarySearchExtensions"]),
+
     ],
+
     targets: [
-        .target(name: "SwiftyBinarySearch", dependencies: []),
-        .testTarget(name: "SwiftyBinarySearchTests", dependencies: ["SwiftyBinarySearch"]),
+
+        .target(name: "SwiftyBinarySearch",
+				dependencies: []),
+
+        .target(name: "SwiftyBinarySearchExtensions",
+				dependencies: ["SwiftyBinarySearch"]),
+
+        .testTarget(name: "SwiftyBinarySearchTests",
+					dependencies: ["SwiftyBinarySearch"]),
+
+        .testTarget(name: "ExtensionsBinarySearchTests",
+					dependencies: ["SwiftyBinarySearchExtensions"]),
+
     ]
 )

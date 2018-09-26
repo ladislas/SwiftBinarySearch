@@ -7,6 +7,10 @@
 
 import Foundation
 
+//
+// MARK: - Binary search
+//
+
 /**
 Find the index of a value in a sorted array
 
@@ -62,59 +66,6 @@ public func binarySearch<T: Comparable>(for value: T, in array: [T]) -> Int {
 }
 
 /**
-Find the index of a value in a sorted array and insert it in place
-
-## Important Notes
-
-- the `array` must be sorted first
-- the function will not work on unsorted arrays and will return false results
-
-## Usage Example:
-
-```swift
-let myArray = [0, 1, 2, 4]
-binarySearchAndInsert(for: 3, in: myArray)
-print(myArray) --> "[0, 1, 2, 3, 4]"
-```
-
-- Parameter value: the value whose index you want to find
-- Parameter array: the array to be searched
-*/
-public func binarySearchAndInsert<T: Comparable>(for value: T, in array: inout [T]) {
-
-	array.insert(value, at: binarySearch(for: value, in: array))
-
-}
-
-/**
-Find the index of a value in a sorted array and return a new array with the value inserted
-
-## Important Notes
-
-- the `array` must be sorted first
-- the function will not work on unsorted arrays and will return false results
-
-## Usage Example:
-
-```swift
-let myArray = [0, 1, 2, 4]
-let newArray = binarySearchAndInsert(for: 3, in: myArray)
-print(newArray) --> "[0, 1, 2, 3, 4]"
-```
-
-- Parameter value: the value whose index you want to find
-- Parameter array: the array to be searched
-- Returns: an array with the value inserted
-*/
-public func binarySearchAndInsert<T: Comparable>(for value: T, in array: [T]) -> [T] {
-
-	var localArray = array
-	localArray.insert(value, at: binarySearch(for: value, in: array))
-	return localArray
-
-}
-
-/**
 Find the index of a value in a sorted array
 
 *Convenience function of* `binarySearch(for:in:)`
@@ -143,10 +94,12 @@ public func search<T: Comparable>(for value: T, in array: [T]) -> Int {
 
 }
 
+//
+// MARK: - Binary search and insert
+//
+
 /**
 Find the index of a value in a sorted array and return a new array with the value inserted
-
-*Convenience function of* `binarySearchAndInsert(for:in:) -> []`
 
 ## Important Notes
 
@@ -157,24 +110,87 @@ Find the index of a value in a sorted array and return a new array with the valu
 
 ```swift
 let myArray = [0, 1, 2, 4]
-let newArray = binarySearchAndInsert(for: 3, in: myArray)
+let newArray = binarySearchAndInsert(element: 3, in: myArray)
 print(newArray) --> "[0, 1, 2, 3, 4]"
 ```
 
-- Parameter value: the value whose index you want to find
+- Parameter element: the element that must be inserted
 - Parameter array: the array to be searched
-- Returns: an array with the value inserted
+- Returns: a new  array with the value inserted
 */
-public func searchAndInsert<T: Comparable>(for value: T, in array: [T]) -> [T] {
+public func binarySearchAndInsert<T: Comparable>(element: T, in array: [T]) -> [T] {
 
-	return binarySearchAndInsert(for: value, in: array)
+	var localArray = array
+	localArray.insert(element, at: binarySearch(for: element, in: array))
+	return localArray
+
+}
+
+
+
+/**
+Find the index of a value in a sorted array and return a new array with the value inserted
+
+*Convenience function of* `binarySearchAndInsert(element:in:) -> []`
+
+## Important Notes
+
+- the `array` must be sorted first
+- the function will not work on unsorted arrays and will return false results
+
+## Usage Example:
+
+```swift
+let myArray = [0, 1, 2, 4]
+let newArray = binarySearchAndInsert(element: 3, in: myArray)
+print(newArray) --> "[0, 1, 2, 3, 4]"
+```
+
+- Parameter element: the element that must be inserted
+- Parameter array: the array to be searched
+- Returns: a new  array with the value inserted
+*/
+public func searchAndInsert<T: Comparable>(element: T, in array: [T]) -> [T] {
+
+	return binarySearchAndInsert(element: element, in: array)
+
+}
+
+
+//
+// MARK: - Binary search and insert in place
+//
+
+
+/**
+Find the index of a value in a sorted array and insert it in place
+
+## Important Notes
+
+- the `array` must be sorted first
+- the function will not work on unsorted arrays and will return false results
+
+## Usage Example:
+
+```swift
+let myArray = [0, 1, 2, 4]
+binarySearchAndInsertInplace(element: 3, in: myArray)
+print(myArray) --> "[0, 1, 2, 3, 4]"
+```
+
+- Parameter element: the element that must be inserted
+- Parameter array: the array to be searched
+*/
+public func binarySearchAndInsert<T: Comparable>(element: T, in array: inout [T]) {
+
+	array.insert(element, at: binarySearch(for: element, in: array))
 
 }
 
 /**
 Find the index of a value in a sorted array and insert it in place
 
-*Convenience function of* `binarySearchAndInsert(for:in:)`
+*Convenience function of* `binarySearchAndInsert(element:in:)`
 
 ## Important Notes
 
@@ -185,15 +201,15 @@ Find the index of a value in a sorted array and insert it in place
 
 ```swift
 let myArray = [0, 1, 2, 4]
-binarySearchAndInsert(for: 3, in: myArray)
+binarySearchAndInsertInplace(element: 3, in: myArray)
 print(myArray) --> "[0, 1, 2, 3, 4]"
 ```
 
-- Parameter value: the value whose index you want to find
+- Parameter element: the element that must be inserted
 - Parameter array: the array to be searched
 */
-public func searchAndInsert<T: Comparable>(for value: T, in array: inout [T]) {
+public func searchAndInsert<T: Comparable>(element: T, in array: inout [T]) {
 
-	return binarySearchAndInsert(for: value, in: &array)
+	return binarySearchAndInsert(element: element, in: &array)
 
 }
