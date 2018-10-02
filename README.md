@@ -1,10 +1,11 @@
 # Swift Binary Search
 
-[![swift v4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](swift.org)
+[![spm](https://img.shields.io/badge/spm-v1.0.0-blue.svg)](https://github.com/apple/swift-package-manager)
+[![swift-version](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](swift.org)
 [![Build Status](https://travis-ci.org/ladislas/SwiftBinarySearch.svg)](https://travis-ci.org/ladislas/SwiftBinarySearch)
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=ladislas_SwiftBinarySearch&metric=alert_status)](https://sonarcloud.io/dashboard?id=ladislas_SwiftBinarySearch)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ladislas_SwiftBinarySearch&metric=coverage)](https://sonarcloud.io/dashboard?id=ladislas_SwiftBinarySearch)
-[![SwiftBinarySearch](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](https://github.com/ladislas/SwiftBinarySearch/blob/master/LICENSE)
+[![SwiftBinarySearch](https://img.shields.io/badge/license-Apache--2.0-lightgrey.svg)](https://github.com/ladislas/SwiftBinarySearch/blob/master/LICENSE)
 
 ## About
 
